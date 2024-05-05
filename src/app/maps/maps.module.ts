@@ -6,9 +6,10 @@ import { MapsLayoutComponent } from './layout/maps-layout/maps-layout.component'
 import { MapsRoutingModule } from './maps-routing.module';
 import { MarkersPageComponent } from './pages/markers-page/markers-page.component';
 import { PropertiesPageComponent } from './pages/properties-page/properties-page.component';
-import { SideMenuComponent } from './components/side-menu/side-menu.component';
+import { SideMenuComponent } from '../alone/components/side-menu/side-menu.component';
 import { ZoomRangePageComponent } from './pages/zoom-range-page/zoom-range-page.component';
 import { MiniMapComponent } from './components/mini-map/mini-map.component';
+import { CounterAloneComponent } from '../alone/components/counter-alone/counter-alone.component';
 
 @NgModule({
   declarations: [
@@ -17,9 +18,13 @@ import { MiniMapComponent } from './components/mini-map/mini-map.component';
     MapsLayoutComponent,
     MarkersPageComponent,
     PropertiesPageComponent,
-    SideMenuComponent,
     ZoomRangePageComponent,
   ],
-  imports: [CommonModule, MapsRoutingModule],
+  imports: [
+    CommonModule,
+    MapsRoutingModule,
+    CounterAloneComponent,
+    SideMenuComponent,
+  ],
 })
 export class MapsModule {}
